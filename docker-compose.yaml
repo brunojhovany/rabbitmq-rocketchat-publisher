@@ -2,9 +2,9 @@ version: '3.6'
 
 services:
   consumer_kycerrors:
-    build: .
+    image: jhovanylinkin/rabbitmq-rocketchat-publisher:latest
     restart: unless-stopped
-    container_name: development
+    container_name: rabbitmq-rocketchat
     volumes:
       - /etc/localtime:/etc/localtime:ro
     env_file:
